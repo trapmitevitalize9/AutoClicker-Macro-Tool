@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Icons\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AutoClicker.App</StartupObject>
+    <PackageProjectUrl>https://github.com/oriash93/AutoClicker</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/oriash93/AutoClicker</RepositoryUrl>
+    <Version>3.3.0</Version>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Copyright>Copyright © 2026</Copyright>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\keyMappings.json" LogicalName="keyMappings.json" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\about.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\location-crosshairs-solid.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\icon_running.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="4.4.0">
+      <TreatAsUsed>true</TreatAsUsed>
+    </PackageReference>
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+</Project>

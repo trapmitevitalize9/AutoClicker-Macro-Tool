@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "area/dependencies"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "nuget"
+    directories:
+      - "/AutoClicker"
+      - "/AutoClicker.Tests"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "area/dependencies"
+    groups:
+      nuget:
+        patterns:
+          - "*"
